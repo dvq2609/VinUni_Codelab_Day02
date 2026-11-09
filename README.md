@@ -13,7 +13,7 @@ Mở terminal tại thư mục gốc của dự án (`VinUni_Day02-AI-Product-La
 
 *   **Windows (PowerShell hoặc CMD):**
     ```powershell
-    python -m venv .venv
+    py -m venv .venv
     ```
 *   **macOS / Linux:**
     ```bash
