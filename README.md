@@ -1,5 +1,25 @@
 # 📖 Hướng Dẫn Học Viên (Student Guide) — Lab 02: AI Product Scoping
 
+## Bài làm hiện tại: Xanh SM — Lên lịch sạc pin thông minh
+
+- [Phase 1: SCAN](01-problem-scan.md)
+- [Phase 2–5: Quick Card, Deep-Dive, prototype và đánh giá](02-deep-dive-report.md)
+- [AI Log](03-ai-log.md)
+- [Sơ đồ quy trình](04-workflow-diagram.png)
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest starter-code/test_prompt_prototype.py -q
+.\.venv\Scripts\python.exe starter-code/prompt_prototype.py
+.\.venv\Scripts\python.exe starter-code/prompt_prototype.py --live
+```
+
+Mặc định chạy offline. Thêm `--live` để gọi Gemini bằng key trong `.env`.
+Kết quả gần nhất: 15 unit tests và 4/4 tình huống Gemini live đạt với
+`gemini-3.1-flash-lite`. Nghỉ 10 giây giữa tình huống; retry có giới hạn cho lỗi tạm thời. Chứng cứ
+được lưu trong `prototype-results-offline.json` và `prototype-results-live.json`.
+Autograder gốc đạt 10,00/10,00; không ghi key vào Git.
+Prototype dùng dữ liệu giả lập, không đặt trụ hoặc gửi lệnh điều phối thật.
+
 Tài liệu này hướng dẫn chi tiết cách thiết lập môi trường lập trình Python, cấu hình API Key, quy trình phân nhánh Git làm việc nhóm và chuẩn bị sản phẩm nộp bài cho **Lab 02: AI Product Scoping (Vin Smart Future)**.
 
 ---
@@ -41,8 +61,24 @@ Bạn phải kích hoạt môi trường ảo mỗi khi mở terminal mới trư
 ### 📥 Bước 3: Cài đặt thư viện cần thiết
 Chạy lệnh sau để cài đặt SDK của Gemini và các thư viện hỗ trợ:
 ```bash
-pip install google-genai google-generativeai pytest
+pip install -r requirements.txt
 ```
+
+Có thể lưu API key trong file `.env` tại thư mục gốc dự án (copy từ
+`.env.example` nếu chưa có):
+
+```dotenv
+GEMINI_API_KEY=your_api_key_here
+```
+
+Script `starter-code/prompt_prototype.py` tự động đọc file này. File `.env`
+đã được bỏ qua trong Git. Sau khi điền key, chạy trên Windows bằng:
+
+```powershell
+.\.venv\Scripts\python.exe starter-code/prompt_prototype.py
+```
+
+Phần `evaluate_prompt()` trong starter code vẫn cần hoàn thành theo bài tập.
 
 ---
 

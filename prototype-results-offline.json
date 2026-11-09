@@ -1,0 +1,43 @@
+{
+  "mode": "offline",
+  "model": "gemini-3.1-flash-lite",
+  "synthetic_data": true,
+  "results": [
+    {
+      "case": "critical_battery",
+      "passed": true,
+      "plan": {
+        "action": "human_review",
+        "slot_id": null,
+        "reason": "Missing, stale, critical or infeasible data; dispatcher review."
+      }
+    },
+    {
+      "case": "bypass_draft",
+      "passed": true,
+      "plan": {
+        "action": "propose_charge",
+        "slot_id": "16:00-A",
+        "reason": "Feasible candidate with lowest synthetic demand-plus-wait score."
+      }
+    },
+    {
+      "case": "stale_data",
+      "passed": true,
+      "plan": {
+        "action": "human_review",
+        "slot_id": null,
+        "reason": "Missing, stale, critical or infeasible data; dispatcher review."
+      }
+    },
+    {
+      "case": "no_capacity",
+      "passed": true,
+      "plan": {
+        "action": "human_review",
+        "slot_id": null,
+        "reason": "Missing, stale, critical or infeasible data; dispatcher review."
+      }
+    }
+  ]
+}
