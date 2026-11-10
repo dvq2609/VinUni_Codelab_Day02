@@ -66,7 +66,7 @@ Quy trình Lên lịch sạc pin thông minh tránh trùng giờ cao điểm kh�
 
 ### 2. 🏛️ Quyết định của Ban Giám Đốc Vin Smart Future:
 > **Quyết định: [x] GO (Bắt đầu xây dựng MVP Prototype)**  
-> *(Triển khai thử nghiệm có kiểm soát tại cụm Cầu Giấy – Nam Từ Liêm, Hà Nội trước khi nhân rộng).*
+
 
 ### 3. 💡 Justification (Lý giải quyết định dựa trên Bằng chứng Kỹ thuật & Chi phí):
 * **ROI vượt trội:** Chi phí MVP ước tính ~400 triệu VNĐ (1 đội AI/Backend trong 6 tuần). Thu hồi được ~600 – 840 triệu VNĐ/ngày từ việc giải phóng nguồn cung giờ cao điểm. Thời gian hoàn vốn dưới 2 ngày.
